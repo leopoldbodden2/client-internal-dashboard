@@ -1,0 +1,301 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html {
+    background-color: theme-color("grey");
+}
+
+/*=============================
+===============================
+Navbar
+===============================
+=============================*/
+.navbar-light {
+    .navbar-brand {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: -3.75;
+        font-size: 26px;
+    }
+
+    .navbar-text {
+        & > h1 {
+            font-size: 26px;
+            font-weight: 300;
+            color: #000;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        & > p {
+            font-size: 12px;
+            font-weight: 300;
+            color: #000;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*=============================
+===============================
+Sidebar
+===============================
+=============================*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 62px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    width: 205px;
+    transition: all 0.3s;
+
+    & .nav-link {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(theme-color("black"), .6);
+        border-bottom: 2px solid #dee1e2;
+    }
+
+    & .nav-link > svg {
+        margin-right: 15px;
+        color: theme-color("black");
+    }
+
+    & .nav-link.active {
+        background-color: theme-color("primary");
+        color: #fff;
+    }
+
+    & .nav-link.active > svg {
+        color: #fff;
+    }
+}
+
+/*=============================
+===============================
+Main
+===============================
+=============================*/
+#app {
+    .card-header {
+        font-size: 1.5rem;
+        color: map-get($theme-colors, "primary");
+        font-weight: bold;
+    }
+}
+[role="main"] {
+    background-color: theme-color("grey");
+    padding-top: 72px;
+    padding-bottom: 20px;
+    margin-left: 213px;
+    width: 650px;
+
+    #email-contacts thead > tr > th:nth-child(1) {
+        width: 20%;
+    }
+
+    #email-contacts thead > tr > th:nth-child(2) {
+        width: 60%;
+    }
+
+    #email-contacts thead > tr > th:nth-child(3) {
+        width: 20%;
+    }
+
+    #phone-calls tfoot > tr > th:nth-child(5) {
+        text-align: right;
+    }
+
+    #phone-calls tfoot > tr > th:nth-child(5),
+    #phone-calls tfoot > tr > th:nth-child(6) {
+        font-weight: normal;
+    }
+
+    .card-table {
+        background-color: transparent;
+        margin-top: 0 !important;
+        font-size: 12px;
+        border: 0;
+
+        .dataTable {
+            font-family: $font-family-serif;
+        }
+
+        .dataTable tbody {
+            background-color: #fff;
+        }
+
+        .dataTable tr > th {
+            vertical-align: top;
+            border: 0;
+            background-color: transparent;
+        }
+
+        .dataTable tbody > tr > td {
+            border-top: 2px solid #dee1e2;
+        }
+
+        .dataTable tbody > tr > td:first-child {
+            border-left: 2px solid #dee1e2;
+        }
+
+        .dataTable tbody > tr > td:last-child {
+            border-right: 2px solid #dee1e2;
+        }
+
+        .dataTable.table-striped tbody tr:nth-of-type(even) {
+            background-color: rgba(theme-color("primary"), .2);
+        }
+
+        .dataTable.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #fff;
+        }
+
+        .dataTable thead .sorting:before,
+        .dataTable thead .sorting:after,
+        .dataTable thead .sorting_asc:before,
+        .dataTable thead .sorting_asc:after,
+        .dataTable thead .sorting_desc:before,
+        .dataTable thead .sorting_desc:after,
+        .dataTable thead .sorting_asc_disabled:before,
+        .dataTable thead .sorting_asc_disabled:after,
+        .dataTable thead .sorting_desc_disabled:before,
+        .dataTable thead .sorting_desc_disabled:after {
+            top: 0.9em;
+            bottom: auto;
+        }
+
+        .card-body {
+            .dataTables_info,
+            .dataTables_length,
+            .dataTables_paginate {
+                font-size: 12px;
+
+                label {
+                    font-size: 12px;
+                }
+
+                select {
+                    font-size: 12px;
+                    height: 30px;
+                    padding: 5px 10px;
+                    line-height: 1.5;
+                    border-radius: 3px;
+                    background-position: center right 0.25rem;
+                }
+            }
+        }
+    }
+
+    .date-range-group {
+        margin-bottom: 5px;
+
+        label {
+            font-size: 14px;
+        }
+
+        select {
+            font-size: 14px;
+            height: 30px;
+            padding: 5px 10px;
+            line-height: 1.5;
+            border-radius: 3px;
+        }
+    }
+}
+
+/*=============================
+===============================
+progress bar
+===============================
+=============================*/
+#nprogress {
+    pointer-events: none;
+
+    .bar {
+        background: theme-color('blue');
+
+        position: fixed;
+        z-index: 1031;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+    }
+
+    /* Fancy blur effect */
+    .peg {
+        display: none;
+    }
+
+    /* Remove these to get rid of the spinner */
+    .spinner {
+        display: block;
+        position: fixed;
+        z-index: 1031;
+        top: 5px;
+        right: 5px;
+    }
+
+    .spinner-icon {
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+
+        border: solid 2px transparent;
+        border-top-color: theme-color('blue');
+        border-left-color: theme-color('blue');
+        border-radius: 50%;
+
+        -webkit-animation: nprogress-spinner 400ms linear infinite;
+        animation: nprogress-spinner 400ms linear infinite;
+    }
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: fixed;
+}
+
+#editCalendarPost {
+    h5 {
+        font-size: 24px;
+        color: map-get($theme-colors, "primary");
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

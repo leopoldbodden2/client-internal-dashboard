@@ -1,0 +1,44 @@
+// Colors
+$blue: #57A0BE;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #F7941D;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$black: #000000;
+$grey: #F3F3F3;
+
+$theme-colors: (
+    "primary": $blue,
+    "secondary": $orange,
+    "tertiary": $black,
+    "blue": $blue,
+    "orange": $orange,
+    "black": $black,
+    "grey": $grey
+);
+
+
+$body-bg: #FFFFFF;
+$body-color: #000000;
+// Typography
+$font-size-base:          0.75rem;
+$font-family-sans-serif:  "Roboto", sans-serif;
+$font-family-serif:       "Open Sans", sans-serif;
+
+$headings-font-family:    $font-family-sans-serif;
+$headings-font-weight:    700;
+
+$h1-font-size:                0.8888888888888888rem;
+$h2-font-size:                0.8333333333333334rem;
+$h3-font-size:                0.7777777777777778rem;
+
+$navbar-light-color:                $black;
+$navbar-light-hover-color:          rgba($black, .7);
+$navbar-light-active-color:         rgba($black, .9);
+$navbar-light-disabled-color:       rgba($black, .3);
+$navbar-light-toggler-border-color: rgba($black, .1);
